@@ -1,0 +1,56 @@
+# Application Pays du Monde
+
+## Fonctionnalités
+- Recherche de pays par nom
+- Affichage sous forme de cartes interactives
+- Détails complets en un clic
+- Gestion robuste des erreurs
+
+GitHUb : https://github.com/robensolivier/AppReactApi/tree/main
+
+## Installation
+1. Cloner le dépôt :
+```bash
+git clone https://github.com/votre-utilisateur/app-pays.git
+
+
+Rapport d'Évaluation (rapport.txt)
+
+1. API Choisie
+
+API RestCountries (v3) - https://restcountries.com
+Justification : API gratuite sans authentification, fournissant des données complètes sur les pays.
+
+2. Endpoints Utilisés
+
+https://restcountries.com/v3.1/all (liste tous les pays)
+https://restcountries.com/v3.1/name/{nom} (recherche par nom)
+https://restcountries.com/v3.1/alpha/{code} (test erreur 404)
+
+3. Composants Créés
+
+Composant	Type	Responsabilité
+BarreRecherche	Interaction	Champ de recherche + boutons
+ListePays	Affichage	Grille de cartes des pays
+DetailsPays	Affichage	Détails complets d'un pays
+AffichageErreur	Gestion erreurs	Messages d'erreur contextualisés
+
+4. Erreurs Gérées
+
+Type d'Erreur	Méthode de Simulation	Message Utilisateur
+Problème réseau	Désactivation wifi / URL erronée	"Impossible de se connecter à l'API"
+Pays non trouvé (404)	Recherche "PaysInexistant"	"Aucun pays trouvé avec ce nom"
+Données mal formées	Appel avec code alpha invalide	"Données incomplètes ou corrompues"
+
+
+5. Tests Effectués
+
+Recherche valide (ex: "France")
+Recherche vide (charge tous les pays)
+Simulation erreur réseau (via DevTools → Offline)
+Test réponse vide (code alpha "XYZ")
+
+6. Captures d'Écran
+
+[Voir fichier joint : capture1.png, capture2.png, capture3.png]
+(Montrant l'affichage normal et les messages d'erreur)
